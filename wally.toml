@@ -1,7 +1,9 @@
 [package]
-name = "devsa/quran-api"
+name = "devsarim/quran-api"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+Promise = "evaera/promise@4.0.0"
+t = "osyrisrblx/t@3.0.0"
