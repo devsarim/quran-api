@@ -20,6 +20,15 @@ local typecheck = t.tuple(
 	t.optional(t.numberConstrained(1, 240)),
 	t.optional(t.string)
 )
+
+--- Get a single translation of all ayah.
+-- @param translationId The id of the translation, see `Resources`.
+-- @param[opt] chapterNumber The number of the chapter, ranging from 1 to 114.
+-- @param[opt] juzNumber The number of the Juz, ranging from 1 to 30.
+-- @param[opt] pageNumber The page number of Madani Mushaf, ranging from 1 to 604.
+-- @param[opt] hizbNumber The number of the Hizb, ranging from 1 to 60.
+-- @param[opt] rubNumber The number of the Rub, ranging from 1 to 240.
+-- @param[opt] verseKey The key of the verse, `chapter:verse`.
 return function(
 	translationId: number,
 	chapterNumber: number?,
@@ -27,7 +36,7 @@ return function(
 	pageNumber: number?,
 	hizbNumber: number?,
 	rubNumber: number?,
-	verseKey: string
+	verseKey: string?
 )
 	assert(typecheck(translationId, chapterNumber, juzNumber, pageNumber, hizbNumber, rubNumber, verseKey))
 

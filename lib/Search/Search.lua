@@ -5,6 +5,8 @@ local t = require(ReplicatedStorage.Packages.t)
 
 local Url = "https://api.quran.com/api/v4/search?size=20&language=en&q=%s"
 
+--- Search using a query string.
+-- @param query The query string to search by.
 return function(query: string)
 	assert(t.string(query))
 

@@ -19,6 +19,14 @@ local typecheck = t.tuple(
 	t.optional(t.numberConstrained(1, 240)),
 	t.optional(t.string)
 )
+
+--- Get Uthmani script of ayah. Use query strings to filter results, leave all query string blank if you want to fetch Uthmani script of whole Quran.
+-- @param[opt] chapterNumber The number of the chapter, ranging from 1 to 114.
+-- @param[opt] juzNumber The number of the Juz, ranging from 1 to 30.
+-- @param[opt] pageNumber The page number of Madani Mushaf, ranging from 1 to 604.
+-- @param[opt] hizbNumber The number of the Hizb, ranging from 1 to 60.
+-- @param[opt] rubNumber The number of the Rub, ranging from 1 to 240.
+-- @param[opt] verseKey The key of the verse, `chapter:verse`.
 return function(
 	chapterNumber: number?,
 	juzNumber: number?,

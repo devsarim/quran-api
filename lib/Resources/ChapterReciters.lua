@@ -5,6 +5,7 @@ local t = require(ReplicatedStorage.Packages.t)
 
 local Url = "https://api.quran.com/api/v4/resources/chapter_reciters?language=en"
 
+--- Get list of chapter reciters.
 return function()
 	return HttpGet(Url)
 end
